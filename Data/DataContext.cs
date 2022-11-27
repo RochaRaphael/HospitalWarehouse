@@ -10,5 +10,8 @@ namespace Blog.DataContext
         public DbSet<Products> Users { get; set; }
         public DbSet<Sector> UserRoles { get; set; }
 
+        protected override void OnConfiguring(DbContextOptionsBuilder options)
+            => options.UseSqlServer("Server=localhost,1433;Database=HospitalWarehouse;User ID=sa;Password=1q2w3e4r@#$;Trusted_Connection=False; TrustServerCertificate=True;");
+
     }
 }
