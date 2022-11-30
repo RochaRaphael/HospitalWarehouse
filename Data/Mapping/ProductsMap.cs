@@ -31,6 +31,12 @@ namespace HospitalWarehouse.Data.Mapping
                 .HasColumnName("Value")
                 .HasColumnType("MONEY");
 
+            builder
+               .HasOne(x => x.ProductCategory)
+               .WithMany(x => x.Products)
+               .HasConstraintName("FK_Post_Category")
+               .OnDelete(DeleteBehavior.Cascade);
+
         }
     }
 }
