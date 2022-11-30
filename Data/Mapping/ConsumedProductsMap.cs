@@ -31,6 +31,12 @@ namespace HospitalWarehouse.Data.Mapping
                 .HasColumnName("Value")
                 .HasColumnType("MONEY");
 
+            builder
+               .HasOne(x => x.SectorThatConsumed)
+               .WithMany(x => x.ConsumedProducts)
+               .HasConstraintName("FK_ConsumedProduct_Sector")
+               .OnDelete(DeleteBehavior.Cascade);
+
 
         }
     }
