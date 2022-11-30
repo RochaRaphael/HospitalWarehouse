@@ -6,7 +6,7 @@ namespace HospitalWarehouse.Models
         public string Name { get; set; }
         public int Quantity { get; set; }
         public double Value { get; set; }
-        public Category ProductCategory { get; set; }
+        public IList<Category> ProductCategory { get; set; }
 
     }
 }

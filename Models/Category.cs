@@ -4,5 +4,6 @@ namespace HospitalWarehouse.Models
     {
         public int Id { get; set; }
         public string CategoryName { get; set; }
+        public Products Products { get; set; }
     }
 }
