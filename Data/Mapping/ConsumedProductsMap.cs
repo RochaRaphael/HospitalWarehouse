@@ -37,6 +37,12 @@ namespace HospitalWarehouse.Data.Mapping
                .HasConstraintName("FK_ConsumedProduct_Sector")
                .OnDelete(DeleteBehavior.Cascade);
 
+            builder
+               .HasOne(x => x.ProductCategory)
+               .WithMany(x => x.ConsumedProducts)
+               .HasConstraintName("FK_ConsumedProduct_Category")
+               .OnDelete(DeleteBehavior.Cascade);
+
 
         }
     }
