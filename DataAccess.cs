@@ -58,6 +58,55 @@ namespace HospitalWarehouse
 
         }
 
+        public static void UseProduct()
+        {
+            Console.WriteLine("Which one product do you want use?");
+            string productUsed = Console.ReadLine();
+            int ConsumedQuantity;
 
+            using (var context = new HospitalDataContext())
+            {
+                var product = context.Products.FirstOrDefault(x => x.Name == productUsed);
+
+                if (product != null)
+                {
+                    Console.WriteLine("How many units will you use??");
+                    ConsumedQuantity = int.Parse(Console.ReadLine());
+                    int availableQuantity = product.Quantity;
+
+                    if (availableQuantity > 0 && availableQuantity > ConsumedQuantity)
+                    {
+                        product.Quantity -= ConsumedQuantity;
+                        context.Update(product);
+
+                        var productAlreadyConsumed = context.ConsumedProducts.FirstOrDefault(x => x.Name == productUsed);
+                        if (productAlreadyConsumed == null)
+                        {
+                            var consumedProduct = new ConsumedProducts
+                            {
+                                Name = product.Name,
+                                ProductCategory = product.ProductCategory,
+                                Quantity = ConsumedQuantity,
+                                Value = product.Value
+                            };
+                        }
+                        else
+                        {
+                            productAlreadyConsumed.Quantity += ConsumedQuantity;
+                        }
+
+
+                    }
+                    else
+                    {
+                        Console.WriteLine($"We don't have enough, we only have {availableQuantity} units.");
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("This product is not registered.");
+                }
+            }
+        }
     }
 }

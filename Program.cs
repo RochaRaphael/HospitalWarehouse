@@ -33,7 +33,7 @@ namespace HospitalWarehouse
                         break;
 
                     case 2:
-
+                        DataAccess.UseProduct();
                         break;
 
                     case 3:
