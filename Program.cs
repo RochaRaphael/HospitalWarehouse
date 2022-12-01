@@ -29,7 +29,7 @@ namespace HospitalWarehouse
                 switch (option)
                 {
                     case 1:
-
+                        DataAccess.InsertProduct();
                         break;
 
                     case 2:
