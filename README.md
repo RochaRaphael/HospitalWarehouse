@@ -9,6 +9,9 @@ foi fazer o sistema identificar o produto já cadastrado e preencher esses dados
 
 Além de resolver esse tipo de problema, também fiz com a intenção de praticar mais a minha habilidade com Entity Framework
 
+--------------------------------------
+O menu principal será simples, dessa forma.
+![Menu principal](https://user-images.githubusercontent.com/109389657/205408734-561dec66-6eaa-4365-b30a-9eb577bf9d4d.PNG)
 
 --------------------------------------
 
@@ -52,7 +55,6 @@ Para que, possamos executar o `Entity Framework` no projeto, se faz necessário 
 ```
 
 # Tenho Dúvidas... O que Faço?! ❓
-Caso tenham dúvidas aos códigos desenvolvidos aqui, sintam-se a vontade em abrir uma ISSUE AQUI. Assim que possível, estarei respondendo as todas as dúvidas que tiverem!
+Caso tenham dúvidas aos códigos desenvolvidos aqui, sintam-se a vontade em abrir uma [ISSUE AQUI](https://github.com/RochaRaphael/HospitalWarehouse/issues). Assim que possível, estarei respondendo as todas as dúvidas que tiverem!
 
-(documentação em desenvolvimento)
 
