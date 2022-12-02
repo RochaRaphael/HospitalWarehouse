@@ -42,7 +42,7 @@ namespace HospitalWarehouse
                         break;
 
                     default:
-                        Console.WriteLine("Invalid option. enter a number from 1 to 7");
+                        Console.WriteLine("Invalid option. enter a number from 1 to 3");
                         option = 0;
                         break;
                 }
