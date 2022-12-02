@@ -12,6 +12,8 @@ namespace HospitalWarehouse
             {
                 Console.WriteLine("WELCOME TO HOSPITAL WAREHOUSE");
                 Console.WriteLine();
+                Console.WriteLine("-----------------------------------");
+                Console.WriteLine();
                 Console.WriteLine("CHOOSE AN OPTION");
                 Console.WriteLine("1- Insert Product");
                 Console.WriteLine("2- Use Product");
